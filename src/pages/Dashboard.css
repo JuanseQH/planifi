@@ -1,0 +1,122 @@
+.dash-top,
+.dash-grid {
+  display: grid;
+  gap: var(--s-4);
+}
+
+.dash-grid {
+  gap: var(--s-6);
+}
+
+/* Hero: income track with the spent share in guayaba */
+.dash-hero__meter.meter {
+  background: var(--hero-income);
+}
+
+.dash-hero__meter .meter__fill {
+  background: var(--hero-expense);
+}
+
+.dash-hero__split div:first-child dt svg {
+  color: var(--hero-income);
+}
+
+.dash-hero__split div:last-child dt svg {
+  color: var(--hero-expense);
+}
+
+/* Savings strip links to Goals */
+.dash-savings {
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  align-items: center;
+  column-gap: var(--s-4);
+  row-gap: var(--s-3);
+  transition: border-color var(--dur-1) var(--ease-out);
+}
+
+.dash-savings:hover {
+  border-color: var(--line-strong);
+}
+
+.dash-savings__value {
+  font-size: var(--text-lg);
+  font-weight: 700;
+}
+
+.dash-savings__chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--ink-faint);
+}
+
+.dash-savings__meter,
+.dash-savings__note {
+  grid-column: 1 / -1;
+}
+
+.dash-savings__meter {
+  margin-top: var(--s-1);
+}
+
+.dash-savings__note {
+  color: var(--ink-faint);
+  font-size: var(--text-sm);
+}
+
+/* Budgets summary */
+.dash-budgets {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-5);
+  list-style: none;
+}
+
+.dash-budget {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.dash-budget__top {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.dash-budget__text {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.dash-budget__name {
+  overflow: hidden;
+  font-weight: 500;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dash-budget__amount {
+  color: var(--ink-faint);
+  font-size: var(--text-sm);
+}
+
+@media (min-width: 48rem) {
+  .dash-top {
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    align-items: stretch;
+  }
+
+  .dash-savings {
+    align-content: center;
+  }
+}
+
+@media (min-width: 64rem) {
+  .dash-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    align-items: start;
+  }
+}
