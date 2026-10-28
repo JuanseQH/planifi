@@ -1,0 +1,144 @@
+/*
+ * Planifi design tokens: "Noche de mora".
+ * Dark is the default theme (set on :root); light overrides under [data-theme="light"].
+ * Contrast of every text/surface pair was verified against WCAG 2.1 AA.
+ */
+:root {
+  color-scheme: dark;
+
+  /* Surfaces: blackberry-tinted neutrals */
+  --bg: oklch(0.165 0.02 345);
+  --surface: oklch(0.21 0.024 345);
+  --raised: oklch(0.25 0.028 345);
+  --hover: oklch(0.29 0.03 345);
+  --line: oklch(0.3 0.026 345);
+  --line-strong: oklch(0.56 0.03 345);
+
+  /* Text */
+  --ink: oklch(0.96 0.01 85);
+  --ink-soft: oklch(0.84 0.018 345);
+  --ink-faint: oklch(0.72 0.022 345);
+
+  /* Accent: maracuyá */
+  --accent: oklch(0.85 0.155 88);
+  --accent-hover: oklch(0.89 0.14 92);
+  --accent-press: oklch(0.8 0.16 82);
+  --on-accent: oklch(0.2 0.03 345);
+  --accent-ink: oklch(0.85 0.155 88);
+  --focus: oklch(0.85 0.155 88);
+
+  /* Semantic tones */
+  --income: oklch(0.83 0.17 138); /* lulo */
+  --expense: oklch(0.74 0.16 25); /* guayaba */
+  --warn: oklch(0.79 0.15 58); /* mango */
+  --save: oklch(0.8 0.11 200); /* caribe */
+
+  /* Category tones */
+  --cat-maracuya: oklch(0.85 0.155 88);
+  --cat-mango: oklch(0.79 0.15 58);
+  --cat-caribe: oklch(0.8 0.11 200);
+  --cat-cielo: oklch(0.78 0.1 250);
+  --cat-orquidea: oklch(0.76 0.13 330);
+  --cat-cacao: oklch(0.76 0.06 55);
+
+  /* Hero panel stays deep mora in both themes */
+  --hero-bg: oklch(0.31 0.085 350);
+  --hero-line: oklch(0.4 0.09 350);
+  --hero-ink: oklch(0.97 0.01 85);
+  --hero-soft: oklch(0.86 0.035 350);
+  --hero-income: oklch(0.83 0.17 138);
+  --hero-expense: oklch(0.76 0.15 25);
+
+  --shadow-1: 0 1px 0 oklch(1 0 0 / 0.03) inset;
+  --shadow-2: 0 12px 32px oklch(0.08 0.02 345 / 0.55);
+  --scrim: oklch(0.1 0.02 345 / 0.7);
+
+  /* Type */
+  --font-sans: 'Rubik Variable', 'Rubik', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --text-xs: 0.75rem;
+  --text-sm: 0.8125rem;
+  --text-base: 0.9375rem;
+  --text-md: 1.0625rem;
+  --text-lg: 1.25rem;
+  --text-xl: 1.625rem;
+  --text-2xl: 2rem;
+  --text-hero: 2.625rem;
+
+  /* Space (4px grid) */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.25rem;
+  --s-6: 1.5rem;
+  --s-8: 2rem;
+  --s-10: 2.5rem;
+  --s-12: 3rem;
+  --gutter: 1.25rem;
+
+  /* Shape */
+  --r-sm: 0.75rem;
+  --r-md: 1.25rem;
+  --r-lg: 1.75rem;
+  --r-full: 999px;
+
+  /* Layout */
+  --header-h: 3.5rem;
+  --bottom-nav-h: 4rem;
+  /* Samsung gesture nav reports a 0px inset but still draws its handle over the page */
+  --bottom-gap: max(var(--safe-bottom), 0.625rem);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+  --sidebar-w: 17.5rem;
+  --tap: 2.75rem;
+  --control-h: 3rem;
+
+  /* Motion */
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --dur-1: 150ms;
+  --dur-2: 220ms;
+  --dur-3: 320ms;
+
+  /* Layers */
+  --z-header: 100;
+  --z-dropdown: 120;
+  --z-sheet-scrim: 300;
+  --z-sheet: 310;
+  --z-toast: 400;
+}
+
+[data-theme='light'] {
+  color-scheme: light;
+
+  --bg: oklch(0.965 0.008 345);
+  --surface: oklch(0.995 0.003 345);
+  --raised: oklch(0.945 0.012 345);
+  --hover: oklch(0.92 0.016 345);
+  --line: oklch(0.9 0.014 345);
+  --line-strong: oklch(0.6 0.02 345);
+
+  --ink: oklch(0.22 0.03 345);
+  --ink-soft: oklch(0.4 0.03 345);
+  --ink-faint: oklch(0.5 0.03 345);
+
+  --accent-hover: oklch(0.88 0.14 92);
+  --accent-press: oklch(0.8 0.16 82);
+  --accent-ink: oklch(0.5 0.11 72);
+  --focus: oklch(0.5 0.11 72);
+
+  --income: oklch(0.48 0.14 145);
+  --expense: oklch(0.51 0.18 25);
+  --warn: oklch(0.51 0.14 55);
+  --save: oklch(0.48 0.09 215);
+
+  --cat-maracuya: oklch(0.52 0.11 75);
+  --cat-mango: oklch(0.54 0.14 55);
+  --cat-caribe: oklch(0.5 0.09 215);
+  --cat-cielo: oklch(0.5 0.12 260);
+  --cat-orquidea: oklch(0.5 0.15 330);
+  --cat-cacao: oklch(0.5 0.06 50);
+
+  --shadow-1: 0 1px 2px oklch(0.3 0.05 345 / 0.06);
+  --shadow-2: 0 16px 40px oklch(0.3 0.05 345 / 0.16);
+  --scrim: oklch(0.22 0.03 345 / 0.45);
+}
