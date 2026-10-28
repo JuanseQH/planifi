@@ -1,0 +1,47 @@
+.chart__title {
+  margin-bottom: var(--s-3);
+  font-size: var(--text-md);
+  font-weight: 600;
+}
+
+.chart__canvas {
+  position: relative;
+}
+
+.chart__skeleton,
+.chart__error {
+  position: absolute;
+  inset: 0;
+  border-radius: var(--r-sm);
+}
+
+.chart__skeleton {
+  background: var(--raised);
+  animation: chart-pulse 1.4s ease-in-out infinite;
+}
+
+.chart__error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-1);
+  padding: var(--s-4);
+  background: var(--surface);
+  color: var(--ink-soft);
+  text-align: center;
+}
+
+.chart__error strong {
+  color: var(--expense);
+}
+
+.chart__error small {
+  color: var(--ink-faint);
+}
+
+@keyframes chart-pulse {
+  50% {
+    opacity: 0.55;
+  }
+}
