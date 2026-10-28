@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Planifi</string>
+    <string name="title_activity_main">Planifi - Finanzas Personales</string>
+    <string name="package_name">com.planifi.add</string>
+    <string name="custom_url_scheme">com.planifi.add</string>
+    <string name="app_description">Gestiona tus finanzas personales de manera inteligente. Controla gastos, ahorra para tus metas y mantén un presupuesto saludable.</string>
+</resources>
